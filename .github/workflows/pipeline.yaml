@@ -1,0 +1,11 @@
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  hello_world_job:
+    # The job should run on a Linux machine with the latest version of Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World!"
