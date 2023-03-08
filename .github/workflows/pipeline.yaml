@@ -3,10 +3,10 @@ on:
     branches: [ main ]
 
 jobs:
-  build_job:
+  run_script_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print my secret
-        env:
-          MY_SECRET: ${{ secrets.MY_SECRET }}
-        run: echo "MY_SECRET is $MY_SECRET"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script
+        run: bash run.sh
