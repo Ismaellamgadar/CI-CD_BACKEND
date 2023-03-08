@@ -3,10 +3,15 @@ on:
     branches: [ main ]
 
 jobs:
-  run_script_job:
+  remote_ssh_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Run script
-        run: bash run.sh
+      - name: SSH into remote server and execute command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            echo "Hello World"
