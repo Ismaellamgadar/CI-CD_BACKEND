@@ -1,1 +1,1 @@
-docker pull ismaellamgadar/backend:latest
+pwd
