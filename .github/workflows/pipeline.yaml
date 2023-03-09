@@ -22,4 +22,5 @@ jobs:
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
           port: 22
-          script: ${GITHUB_WORKSPACE}/remote.sh
+          run: bash remote.sh
+          shell: bash
