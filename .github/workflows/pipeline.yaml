@@ -24,4 +24,4 @@ jobs:
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
           port: 22
-          script: ./remote.sh
+          script: sh ./remote.sh
