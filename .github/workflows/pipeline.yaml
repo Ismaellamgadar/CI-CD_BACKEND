@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: push
         run: bash ${GITHUB_WORKSPACE}/run.sh
         shell: bash
 
