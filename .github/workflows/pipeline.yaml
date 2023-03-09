@@ -11,6 +11,7 @@ jobs:
       - name: push
         run: bash ${GITHUB_WORKSPACE}/run.sh
         shell: bash
+        
 
   remote-connect:
     runs-on: ubuntu-latest
